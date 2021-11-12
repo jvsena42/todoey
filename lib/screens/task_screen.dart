@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
+import 'package:todoey/components/task_list.dart';
 
 class TaskScreen extends StatefulWidget {
-  const TaskScreen({Key? key}) : super(key: key);
 
   @override
   _TaskScreenState createState() => _TaskScreenState();
@@ -58,6 +58,7 @@ class _TaskScreenState extends State<TaskScreen> {
           ),
           Expanded(
             child: Container(
+              padding: EdgeInsets.symmetric(horizontal: 20.0),
               height: 300.0,
               decoration: BoxDecoration(
                 color: Colors.white,
@@ -66,6 +67,7 @@ class _TaskScreenState extends State<TaskScreen> {
                   topRight: Radius.circular(20.0),
                 ),
               ),
+              child: TasksList(),
             ),
           ),
         ],
@@ -73,3 +75,4 @@ class _TaskScreenState extends State<TaskScreen> {
     );
   }
 }
+
