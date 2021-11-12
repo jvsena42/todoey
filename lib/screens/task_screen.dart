@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:todoey/components/task_list.dart';
+import 'package:animated_text_kit/animated_text_kit.dart';
 
 class TaskScreen extends StatefulWidget {
 
@@ -38,13 +39,19 @@ class _TaskScreenState extends State<TaskScreen> {
                 SizedBox(
                   height: 10.0,
                 ),
-                Text(
-                  'Todoey',
-                  style: TextStyle(
-                    color: Colors.white,
-                    fontSize: 50.0,
-                    fontWeight: FontWeight.w700,
-                  ),
+                AnimatedTextKit(
+                  animatedTexts: [
+                    TypewriterAnimatedText(
+                      'Todoey',
+                      textStyle: TextStyle(
+                        color: Colors.white,
+                        fontSize: 50.0,
+                        fontWeight: FontWeight.w700,
+                      ),
+                      speed: const Duration(milliseconds: 300)
+                    ),
+                  ],
+                  totalRepeatCount: 1,
                 ),
                 Text(
                   '12 Tasks',
