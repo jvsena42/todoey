@@ -6,20 +6,21 @@ import 'package:todoey/utils/constants.dart';
 import 'add_task_screen.dart';
 
 class TaskScreen extends StatefulWidget {
-
   @override
   _TaskScreenState createState() => _TaskScreenState();
 }
 
 class _TaskScreenState extends State<TaskScreen> {
-
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       backgroundColor: Colors.lightGreen,
       floatingActionButton: FloatingActionButton(
         onPressed: () {
-          showModalBottomSheet(shape: bottomSheetRadius, context: context, builder: (context) => AddTaskScreen());
+          showModalBottomSheet(
+              shape: bottomSheetRadius,
+              context: context,
+              builder: (context) => AddTaskScreen());
         },
         backgroundColor: Colors.lightGreen,
         child: Icon(Icons.add),
@@ -47,15 +48,13 @@ class _TaskScreenState extends State<TaskScreen> {
                 ),
                 AnimatedTextKit(
                   animatedTexts: [
-                    TypewriterAnimatedText(
-                      'Todoey',
-                      textStyle: TextStyle(
-                        color: Colors.white,
-                        fontSize: 50.0,
-                        fontWeight: FontWeight.w700,
-                      ),
-                      speed: const Duration(milliseconds: 300)
-                    ),
+                    TypewriterAnimatedText('Todoey',
+                        textStyle: TextStyle(
+                          color: Colors.white,
+                          fontSize: 50.0,
+                          fontWeight: FontWeight.w700,
+                        ),
+                        speed: const Duration(milliseconds: 300)),
                   ],
                   totalRepeatCount: 1,
                 ),
@@ -88,4 +87,3 @@ class _TaskScreenState extends State<TaskScreen> {
     );
   }
 }
-
