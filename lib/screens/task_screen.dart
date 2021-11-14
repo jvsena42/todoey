@@ -1,6 +1,9 @@
+import 'package:animated_text_kit/animated_text_kit.dart';
 import 'package:flutter/material.dart';
 import 'package:todoey/components/task_list.dart';
-import 'package:animated_text_kit/animated_text_kit.dart';
+import 'package:todoey/utils/constants.dart';
+
+import 'add_task_screen.dart';
 
 class TaskScreen extends StatefulWidget {
 
@@ -9,12 +12,15 @@ class TaskScreen extends StatefulWidget {
 }
 
 class _TaskScreenState extends State<TaskScreen> {
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       backgroundColor: Colors.lightGreen,
       floatingActionButton: FloatingActionButton(
-        onPressed: () {},
+        onPressed: () {
+          showModalBottomSheet(shape: bottomSheetRadius, context: context, builder: (context) => AddTaskScreen());
+        },
         backgroundColor: Colors.lightGreen,
         child: Icon(Icons.add),
       ),
