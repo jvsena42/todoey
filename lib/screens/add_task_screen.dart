@@ -1,9 +1,18 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
+import 'package:todoey/utils/constants.dart';
 
 class AddTaskScreen extends StatelessWidget {
+
+  final Function onPress;
+
+  AddTaskScreen(this.onPress);
+
   @override
   Widget build(BuildContext context) {
+
+    String newTaskTitle = "";
+
     return Container(
       padding: EdgeInsets.all(
         20.0,
@@ -23,21 +32,18 @@ class AddTaskScreen extends StatelessWidget {
             autofocus: true,
             textAlign: TextAlign.center,
             cursorColor: Colors.lightGreen,
-            decoration: InputDecoration(
-              enabledBorder: UnderlineInputBorder(
-                borderSide: BorderSide(color: Colors.white30, width: 2.0),
-              ),
-              focusedBorder: UnderlineInputBorder(
-                borderSide:
-                    BorderSide(color: Colors.lightGreenAccent, width: 2.0),
-              ),
-            ),
+            decoration: kDecoration,
+            onChanged: (newText) {
+              newTaskTitle = newText;
+            },
           ),
           SizedBox(
             height: 8.0,
           ),
           ElevatedButton(
-            onPressed: () {},
+            onPressed: () {
+              onPress(newTaskTitle);
+            },
             child: Text('Add'),
             style: ButtonStyle(
               backgroundColor:
