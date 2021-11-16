@@ -1,14 +1,20 @@
+import 'dart:collection';
 import 'package:flutter/foundation.dart';
 import 'package:todoey/models/task.dart';
 
 class TaskData  with ChangeNotifier, DiagnosticableTreeMixin {
 
-  List<Task> tasks = [
-    Task(name: 'Task 1'),
-  ];
+  List<Task> _tasks = [];
 
   int get taskCount {
-    return tasks.length;
+    return _tasks.length;
   }
 
+  void addTask(String newTaskTitle) {
+    Task task = Task(name: newTaskTitle);
+    _tasks.add(task);
+    notifyListeners();
+  }
+
+  UnmodifiableListView<Task> get tasks => UnmodifiableListView(_tasks);
 }
