@@ -3,18 +3,24 @@ import 'package:provider/provider.dart';
 import 'package:todoey/models/tasks_data.dart';
 import 'package:todoey/screens/task_screen.dart';
 
-void main() => runApp(const MyApp());
+void main() {
+  runApp(
+    MultiProvider(
+      providers: [
+        ChangeNotifierProvider(create: (_) => TaskData()),
+      ],
+      child: const MyApp(),
+    ),
+  );
+}
 
 class MyApp extends StatelessWidget {
   const MyApp({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
-    return ChangeNotifierProvider(
-      builder: (context) => TaskData(),
-      child: MaterialApp(
-        home: TaskScreen(),
-      ),
+    return MaterialApp(
+      home: TaskScreen(),
     );
   }
 }

@@ -1,7 +1,7 @@
 import 'package:flutter/foundation.dart';
 import 'package:todoey/models/task.dart';
 
-class TaskData extends ChangeNotifier {
+class TaskData  with ChangeNotifier, DiagnosticableTreeMixin {
 
   List<Task> tasks = [
     Task(name: 'Task 1'),
