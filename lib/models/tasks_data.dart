@@ -16,5 +16,10 @@ class TaskData  with ChangeNotifier, DiagnosticableTreeMixin {
     notifyListeners();
   }
 
+  void updateTask(Task task) {
+      task.toggleDone();
+      notifyListeners();
+  }
+
   UnmodifiableListView<Task> get tasks => UnmodifiableListView(_tasks);
 }
