@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 import 'package:todoey/components/task_tile.dart';
-import 'package:todoey/models/task.dart';
 import 'package:todoey/models/tasks_data.dart';
 
 class TasksList extends StatelessWidget {
@@ -18,6 +17,9 @@ class TasksList extends StatelessWidget {
               (bool? currentState) {
                 taskData.updateTask(task);
               },
+                () {
+                  taskData.deleteTask(task);
+                },
             );
           },
           itemCount: taskData.taskCount,
