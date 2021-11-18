@@ -1,15 +1,14 @@
 import 'package:animated_text_kit/animated_text_kit.dart';
 import 'package:flutter/material.dart';
+import 'package:provider/provider.dart';
+import 'package:todoey/components/images.dart';
 import 'package:todoey/components/task_list.dart';
-import 'package:todoey/models/task.dart';
 import 'package:todoey/models/tasks_data.dart';
 import 'package:todoey/utils/constants.dart';
-import 'package:provider/provider.dart';
 
 import 'add_task_screen.dart';
 
 class TaskScreen extends StatelessWidget {
-
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -17,7 +16,7 @@ class TaskScreen extends StatelessWidget {
       floatingActionButton: FloatingActionButton(
         onPressed: () {
           showModalBottomSheet(
-            shape: bottomSheetRadius,
+            shape: kBottomSheetRadius,
             context: context,
             builder: (context) => AddTaskScreen(),
           );
@@ -34,15 +33,7 @@ class TaskScreen extends StatelessWidget {
             child: Column(
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
-                CircleAvatar(
-                  child: Icon(
-                    Icons.list,
-                    size: 30.0,
-                    color: Colors.lightGreen,
-                  ),
-                  backgroundColor: Colors.white,
-                  radius: 30.0,
-                ),
+                ImageCircle(),
                 SizedBox(
                   height: 10.0,
                 ),
@@ -50,7 +41,7 @@ class TaskScreen extends StatelessWidget {
                   animatedTexts: [
                     TypewriterAnimatedText('Todoey',
                         textStyle: TextStyle(
-                          color: Colors.white,
+                          color: kWhite,
                           fontSize: 50.0,
                           fontWeight: FontWeight.w700,
                         ),
@@ -61,7 +52,7 @@ class TaskScreen extends StatelessWidget {
                 Text(
                   '${Provider.of<TaskData>(context).taskCount} Tasks',
                   style: TextStyle(
-                    color: Colors.white,
+                    color: kWhite,
                     fontSize: 18,
                   ),
                 ),
@@ -70,15 +61,9 @@ class TaskScreen extends StatelessWidget {
           ),
           Expanded(
             child: Container(
+              constraints: BoxConstraints(minHeight: 300),
               padding: EdgeInsets.symmetric(horizontal: 20.0),
-              height: 300.0,
-              decoration: BoxDecoration(
-                color: Colors.white,
-                borderRadius: BorderRadius.only(
-                  topLeft: Radius.circular(20.0),
-                  topRight: Radius.circular(20.0),
-                ),
-              ),
+              decoration: kBoxDecoration,
               child: TasksList(),
             ),
           ),

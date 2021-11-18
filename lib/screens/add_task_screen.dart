@@ -24,14 +24,14 @@ class AddTaskScreen extends StatelessWidget {
             textAlign: TextAlign.center,
             style: TextStyle(
               fontSize: 30.0,
-              color: Colors.lightGreen,
+              color: kGreen,
             ),
           ),
           TextField(
             autofocus: true,
             textAlign: TextAlign.center,
-            cursorColor: Colors.lightGreen,
-            decoration: kDecoration,
+            cursorColor: kGreen,
+            decoration: kInputDecoration,
             onChanged: (newText) {
               newTaskTitle = newText;
             },
@@ -47,7 +47,7 @@ class AddTaskScreen extends StatelessWidget {
             child: Text('Add'),
             style: ButtonStyle(
               backgroundColor:
-                  MaterialStateProperty.all<Color>(Colors.lightGreen),
+                  MaterialStateProperty.all<Color>(kGreen),
             ),
           ),
         ],
