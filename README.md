@@ -1,16 +1,26 @@
-# todoey
 
-A todo list app
+# Todoey
 
-## Getting Started
+A to-do list built in Flutter
 
-This project is a starting point for a Flutter application.
 
-A few resources to get you started if this is your first Flutter project:
 
-- [Lab: Write your first Flutter app](https://flutter.dev/docs/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://flutter.dev/docs/cookbook)
 
-For help getting started with Flutter, view our
-[online documentation](https://flutter.dev/docs), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+
+
+
+## Features
+
+- Animations
+- Provider
+
+
+
+## Screenshots
+
+![Screen 1](https://drive.google.com/file/d/1DhZrVjy8eswd7L_9h5DEByS5wflb-BeP/view?usp=sharing)
+
+![Screen 2](https://drive.google.com/file/d/1UOHAgSu8m1fuzl1X1QvQ2qxEWzFK5Gml/view?usp=sharing)
+## 🔗 Links
+[Udemy Course](https://www.udemy.com/share/101WB63@ftS_sVvZPOkUkROckX9DkjYWq6-1M1MyXMdOShIVS2sPrCFKQHkG9DdjjhkE_TU_/)
+
