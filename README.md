@@ -1,7 +1,7 @@
 
 # Todoey
 
-A to-do list built in Flutter
+A to-do list app built in Flutter
 
 
 
@@ -11,16 +11,17 @@ A to-do list built in Flutter
 
 ## Features
 
+- State Management with Provider
 - Animations
-- Provider
+
 
 
 
 ## Screenshots
 
-![Screen 1](https://drive.google.com/file/d/1DhZrVjy8eswd7L_9h5DEByS5wflb-BeP/view?usp=sharing)
+![Screen 1](https://github.com/jvsena42/todoey/blob/master/screenshots/01.png?raw=true)
 
-![Screen 2](https://drive.google.com/file/d/1UOHAgSu8m1fuzl1X1QvQ2qxEWzFK5Gml/view?usp=sharing)
+![Screen 2](https://github.com/jvsena42/todoey/blob/master/screenshots/02.png?raw=true)
 ## 🔗 Links
 [Udemy Course](https://www.udemy.com/share/101WB63@ftS_sVvZPOkUkROckX9DkjYWq6-1M1MyXMdOShIVS2sPrCFKQHkG9DdjjhkE_TU_/)
 
